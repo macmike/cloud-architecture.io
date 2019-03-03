@@ -12,3 +12,4 @@ author = "Mike"
 Welcome to **cloud-architecture.io**, a free resource for people on good development and architectural practices for Cloud.
 
 This site is brand new, so there's not much content yet!
+
