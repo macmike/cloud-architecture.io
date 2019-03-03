@@ -1,0 +1,23 @@
+{{ $baseurl := .Site.BaseURL }}
+<article class="post {{ .Section }}">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+          <section class="post-content">
+            {{ .Content }}
+          </section>
+      </p>
+      <!--
+        {{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+      -->
+    </section>
+    <footer class="post-meta">
+        {{if .Params.tags }}Tags:
+            {{ range $index, $tag := .Params.tags }}
+                <a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
+            {{ end }}
+        {{end}}
+    </footer>
+</article>

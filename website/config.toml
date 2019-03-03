@@ -1,0 +1,20 @@
+baseURL = "cloud-architecture.io"
+theme = "air"
+title = "cloud-architecture.io"
+
+[author]
+  name = "Mike"
+
+[params]
+  description = "how to cloud"
+  cover = "images/user.jpg"
+  author = "Mike"
+  authorlocation = ""
+  authorwebsite = "https://soft-practice.com"
+  bio= "my bio"
+  logo = "images/user.png"
+  googleAnalyticsUserID = ""
+  githubName = "macmike"
+  twitterName = "mikemacd"
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = true
