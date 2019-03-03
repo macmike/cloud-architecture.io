@@ -1,4 +1,4 @@
-baseURL = "cloud-architecture.io"
+baseURL = "https://cloud-architecture.io/"
 theme = "air"
 title = "cloud-architecture.io"
 

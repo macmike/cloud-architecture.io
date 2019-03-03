@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag2 on cloud-architecture.io</title>
+    <link>https://cloud-architecture.io/tags/tag2/</link>
+    <description>Recent content in Tag2 on cloud-architecture.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 03 Mar 2019 15:26:51 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloud-architecture.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://cloud-architecture.io/post/introduction/</link>
+      <pubDate>Sun, 03 Mar 2019 15:26:51 +0000</pubDate>
+      
+      <guid>https://cloud-architecture.io/post/introduction/</guid>
+      <description>Welcome to cloud-architecture.io, a free resource for people on good development and architectural practices for Cloud.</description>
+    </item>
+    
+  </channel>
+</rss>
