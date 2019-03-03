@@ -9,3 +9,4 @@ share = true	# set false to hide share buttons
 menu= ""		# set "main" to add this content to the main menu
 author = "Mike"
 +++
+Welcome to **cloud-architecture.io**, a free resource for people on good development and architectural practices for Cloud.
