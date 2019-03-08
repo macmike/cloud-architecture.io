@@ -34,6 +34,7 @@
 	  <link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/apple-touch-icon.png" />
     
     <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/caio.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
 
@@ -63,12 +64,17 @@
 
     </script>
     {{end}}
+</head>
+
+
+
+
+<!--<body class="nav-closed">-->
+<body>    
+{{ partial "navigation.html" . }}
 <div id="particles-js"></div>
 <script src="{{ .Site.BaseURL }}js/particles.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/particles.js"></script>   
-</head>
-<body class="nav-closed">
 
-  {{ partial "navigation.html" . }}
 
  <div class="site-wrapper">

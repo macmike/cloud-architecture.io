@@ -1,6 +1,7 @@
 baseURL = "https://cloud-architecture.io/"
 theme = "air"
 title = "cloud-architecture.io"
+sectionPagesMenu = "main"
 
 [author]
   name = "Mike"
@@ -18,3 +19,4 @@ title = "cloud-architecture.io"
   twitterName = "mikemacd"
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = false 
+

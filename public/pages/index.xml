@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cloud-architecture.io</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on cloud-architecture.io</description>
+    <title>Pages on cloud-architecture.io</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on cloud-architecture.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 03 Mar 2019 16:34:34 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,25 +19,6 @@
       <description>cloud-architecture.io is owned by Soft-Practice Ltd.
 Soft Practice Privacy Policy This Privacy Policy governs the manner in which Soft-Practice Ltd. collects, uses, maintains and discloses information collected from users (each, a &amp;ldquo;User&amp;rdquo;) of the cloud-architecture.io website (&amp;ldquo;Site&amp;rdquo;). This privacy policy applies to the Site and all products and services offered by cyber-shadow Ltd.
 Personal identification information We may collect personal identification information from Users in a variety of ways in connection with activities, services, features or resources we make available on our Site.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/architecture/</link>
-      <pubDate>Sun, 03 Mar 2019 16:23:10 +0000</pubDate>
-      
-      <guid>http://localhost:1313/architecture/</guid>
-      <description>TBC: Intro to architecture</description>
-    </item>
-    
-    <item>
-      <title>Home</title>
-      <link>http://localhost:1313/post/home/</link>
-      <pubDate>Sun, 03 Mar 2019 15:26:51 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/home/</guid>
-      <description>Welcome to cloud-architecture.io, a free resource for people on good development and architectural practices for Cloud.
-This site is brand new, so there&amp;rsquo;s not much content yet!</description>
     </item>
     
   </channel>

@@ -1,3 +1,16 @@
+<div class="site-header">
+  <nav class="navbar">
+    {{ $currentPage := . }}
+      
+    {{ range .Site.Menus.main }}
+     
+    <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+             
+         
+  </nav>
+</div>
+        
 <!--
 <div class="nav">
     <h3 class="nav-title">Menu</h3>
