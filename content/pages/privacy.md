@@ -11,7 +11,7 @@ author = "Mike"
 
 cloud-architecture.io is owned by [Soft-Practice Ltd.](https://soft-practice.com)
 
-# Soft Practice Privacy Policy
+# cloud-architecture.io Privacy Policy
 
 This Privacy Policy governs the manner in which Soft-Practice Ltd. collects, uses, maintains and discloses information collected from users (each, a "User") of the cloud-architecture.io website ("Site"). This privacy policy applies to the Site and all products and services offered by cyber-shadow Ltd.
 
