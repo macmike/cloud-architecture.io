@@ -6,7 +6,7 @@ tags = ["tag1","tag2"]
 image = ""
 comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
-menu= "main"		# set "main" to add this content to the main menu
+menu= ""		# set "main" to add this content to the main menu
 author = "Mike"
 +++
 Welcome to **cloud-architecture.io**, a free resource about good development and architectural practices for Cloud. You can edit this page, and anything else on this site, it's all hosted as [markdown](https://en.wikipedia.org/wiki/Markdown) on [github](https://github.com/macmike/cloud-architecture.io).
