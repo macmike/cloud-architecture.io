@@ -1,38 +1,31 @@
+{{ if .IsHome }}
+<div class="site-header-home">
+{{ else  }}
 <div class="site-header">
-  <nav class="navbar">
+{{end}}
+<nav class="navbar">
     {{ $currentPage := . }}
-      
-    {{ range .Site.Menus.main }}
-     
-    <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ if .Site.Params.logo }}
+        <a class="navbar-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Blog Logo" /></a>
+        <span class="navbar-spacer">&nbsp;</span>
+    {{end}}  
+    {{ range .Site.Menus.main }}     
+
+
+    
+    
+        {{ if eq .Page nil }}
+           <!-- hide sections, only show pages -->
+        {{ else }}
+            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> 
+        {{ end }}
+    
+    
+
+        
+    
     {{ end }}
-             
          
   </nav>
-</div>
-        
-<!--
-<div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-        {{ $currentNode := . }}
-        {{ range .Site.Menus.main }}
-            {{.Pre}}
-            <li class="nav-opened{{if $currentNode.IsMenuCurrent "main" . }} nav-current{{end}}" role="presentation">
-            	<a href="{{.URL}}">{{.Name}}</a>
-            </li>
-        {{end}}
-    </ul>
-    
-    {{ if .Site.Params.RSSLink}}
-    <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
-    {{else}}
-    <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
-    {{end}}
-</div>
-<span class="nav-cover"></span>
+</div>     
 
--->

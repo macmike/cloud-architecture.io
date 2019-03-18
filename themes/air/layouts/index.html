@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
 
-{{if .Site.Params.cover}}
+{{ if .IsHome }}
 <header class="main-header " style="background-image: url({{.Site.BaseURL}}{{.Site.Params.cover}})">
-
 {{else}}
 <header class="main-header no-cover">
 {{end}}
     
+
 
     <nav class="main-nav overlay clearfix">
         {{ if .Site.Params.logo }}
@@ -54,3 +54,17 @@
 </main>
 
 {{ partial "footer.html" . }}
+    
+        
+<script>
+
+    $(document).scroll(function() {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.site-header-home').fadeIn();
+      } else {
+        $('.site-header-home').fadeOut();
+      }
+    });
+
+</script>

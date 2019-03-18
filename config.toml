@@ -7,7 +7,7 @@ sectionPagesMenu = "main"
   name = "Mike"
 
 [params]
-  description = "how to cloud"
+  description = "Architecting for Cloud"
   cover = "images/user.jpg"
   author = "Mike"
   authorlocation = ""

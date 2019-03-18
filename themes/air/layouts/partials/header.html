@@ -72,9 +72,11 @@
 <!--<body class="nav-closed">-->
 <body>    
 {{ partial "navigation.html" . }}
+
+{{ if .IsHome }}    
 <div id="particles-js"></div>
 <script src="{{ .Site.BaseURL }}js/particles.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/particles.js"></script>   
-
+{{end}}
 
  <div class="site-wrapper">

@@ -1,17 +1,15 @@
 +++
 title = "Privacy"
-date = 2019-03-03T16:34:34Z
+date = 2019-03-02T16:34:34Z
 draft = false
 image = ""
 comments = false # set false to hide Disqus
-share = true	# set false to hide share buttons
-menu= "main"		# set "main" to add this content to the main menu
+share = false	# set false to hide share buttons
+menu= ""		# set "main" to add this content to the main menu
 author = "Mike"
 +++
 
-cloud-architecture.io is owned by [Soft-Practice Ltd.](https://soft-practice.com)
-
-# Soft-Practice Privacy Policy
+cloud-architecture.io is provided for free by [Soft-Practice Ltd.](https://soft-practice.com)
 
 This Privacy Policy governs the manner in which Soft-Practice Ltd. collects, uses, maintains and discloses information collected from users (each, a "User") of the cloud-architecture.io website ("Site"). This privacy policy applies to the Site and all products and services offered by cyber-shadow Ltd.
 

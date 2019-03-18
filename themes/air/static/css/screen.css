@@ -1,28 +1,28 @@
 /* ==========================================================================
-   Table of Contents
-   ========================================================================== */
+Table of Contents
+========================================================================== */
 
 /*
 
-    0.  Normalize
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Tag Archive
-    7.  Third Party Elements
-    8.  Pagination
-    9.  Footer
-    10. Media Queries (Tablet)
-    11. Media Queries (Mobile)
-    12. Animations
+0.  Normalize
+1.  Icons
+2.  General
+3.  Utilities
+4.  General
+5.  Single Post
+6.  Tag Archive
+7.  Third Party Elements
+8.  Pagination
+9.  Footer
+10. Media Queries (Tablet)
+11. Media Queries (Mobile)
+12. Animations
 
 */
 
 /* ==========================================================================
-   0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
-   ========================================================================== */
+0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
+========================================================================== */
 
 article, aside, details,
 figcaption, figure,
@@ -33,9 +33,9 @@ audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
 html {
-   font-family: sans-serif;
-   -ms-text-size-adjust: 100%;
-   -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 body { margin: 0; }
 a { background: transparent; }
@@ -46,9 +46,9 @@ abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: 700; }
 dfn { font-style: italic; }
 hr {
-   -moz-box-sizing: content-box;
-   box-sizing: content-box;
-   height: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
 }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
@@ -57,10 +57,10 @@ pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 small { font-size: 80%; }
 sub, sup {
-   font-size: 75%;
-   line-height: 0;
-   position: relative;
-   vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
@@ -68,9 +68,9 @@ img { border: 0; }
 svg:not(:root) { overflow: hidden; }
 figure { margin: 0; }
 fieldset {
-   border: 1px solid #c0c0c0;
-   margin: 0 2px;
-   padding: 0.35em 0.625em 0.75em;
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
 }
 legend { border: 0; padding: 0; }
 button, input, select,
@@ -79,17 +79,17 @@ button, input { line-height: normal; }
 button, select { text-transform: none; }
 button, html input[type="button"],
 input[type="reset"], input[type="submit"] {
-   -webkit-appearance: button;
-   cursor: pointer;
+    -webkit-appearance: button;
+    cursor: pointer;
 }
 button[disabled], html input[disabled] { cursor: default; }
 input[type="checkbox"],
 input[type="radio"] { box-sizing: border-box; padding: 0; }
 input[type="search"] {
-   -webkit-appearance: textfield;
-   -moz-box-sizing: content-box;
-   -webkit-box-sizing: content-box;
-   box-sizing: content-box;
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
@@ -98,18 +98,18 @@ input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 table { border-collapse: collapse; border-spacing: 0; }
 /* ==========================================================================
-   1. Icons - Sets up the icon font and respective classes
-   ========================================================================== */
+1. Icons - Sets up the icon font and respective classes
+========================================================================== */
 
 /* Import the font file with the icons in it */
 @font-face {
-  font-family: 'genericons';
-  src: url('../fonts/Genericons.eot');
-  src: url('../fonts/Genericons.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Genericons.woff') format('woff'),
-       url('../fonts/Genericons.ttf') format('truetype'),
-       url('../fonts/Genericons.svg#entypo') format('svg');
-  font-weight: normal; font-style: normal;
+    font-family: 'genericons';
+    src: url('../fonts/Genericons.eot');
+    src: url('../fonts/Genericons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Genericons.woff') format('woff'),
+        url('../fonts/Genericons.ttf') format('truetype'),
+        url('../fonts/Genericons.svg#entypo') format('svg');
+    font-weight: normal; font-style: normal;
 }
 
 /* Apply these base styles to all icons */
@@ -127,7 +127,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 
 /* Each icon is created by inserting the correct character into the
-   content of the :before pseudo element. Like a boss. */
+content of the :before pseudo element. Like a boss. */
 .icon-github:before {
     content: "\f200";
 }
@@ -166,8 +166,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 /* ==========================================================================
-   2. General - Setting up some base styles
-   ========================================================================== */
+2. General - Setting up some base styles
+========================================================================== */
 
 html {
     height: 100%;
@@ -420,7 +420,7 @@ table tbody > tr:nth-child(odd) > th {
 
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
-   background: transparent;
+    background: transparent;
 }
 
 iframe, .fluid-width-video-wrapper {
@@ -436,8 +436,8 @@ margin on the iframe, cause it breaks stuff. */
 
 
 /* ==========================================================================
-   3. Utilities - These things get used a lot
-   ========================================================================== */
+3. Utilities - These things get used a lot
+========================================================================== */
 
 /* Clears shit */
 .clearfix:before,
@@ -476,22 +476,22 @@ margin on the iframe, cause it breaks stuff. */
     min-height: 100%;
     background: #fff;
     -webkit-transition: -webkit-transform 0.5s ease;
-            transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 body.nav-opened .site-wrapper {
     overflow-x: hidden;
     -webkit-transform: translate3D(-240px, 0, 0);
-        -ms-transform: translate3D(-240px, 0, 0);
-            transform: translate3D(-240px, 0, 0);
+    -ms-transform: translate3D(-240px, 0, 0);
+    transform: translate3D(-240px, 0, 0);
     -webkit-transition: -webkit-transform 0.3s ease;
-            transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 
 /* ==========================================================================
-   4. General - The main styles for the the theme
-   ========================================================================== */
+4. General - The main styles for the the theme
+========================================================================== */
 
 /* Big cover image on the home page */
 .main-header {
@@ -544,30 +544,30 @@ body.nav-opened .nav-cover {
     text-align: left;
     overflow-y: auto;
     -webkit-transition: -webkit-transform 0.5s ease,
-                        opacity 0.3s ease 0.7s;
-            transition: transform 0.5s ease,
-                        opacity 0.3s ease 0.7s;
-font-family: "Open Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-font-weight: 700;
-font-size: 11px;
-color: #909090;
+        opacity 0.3s ease 0.7s;
+    transition: transform 0.5s ease,
+        opacity 0.3s ease 0.7s;
+    font-family: "Open Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: #909090;
 }
 
 body.nav-closed .nav {
     -webkit-transform: translate3D(97px, 0, 0);
-        -ms-transform: translate3D(97px, 0, 0);
-            transform: translate3D(97px, 0, 0);
+    -ms-transform: translate3D(97px, 0, 0);
+    transform: translate3D(97px, 0, 0);
 }
 
 body.nav-opened .nav {
     opacity: 1;
     -webkit-transition: -webkit-transform 0.3s ease,
-                        opacity 0s ease 0s;
-            transition: transform 0.3s ease,
-                        opacity 0s ease 0s;
+        opacity 0s ease 0s;
+    transition: transform 0.3s ease,
+        opacity 0s ease 0s;
     -webkit-transform: translate3D(0, 0, 0);
-        -ms-transform: translate3D(0, 0, 0);
-            transform: translate3D(0, 0, 0);
+    -ms-transform: translate3D(0, 0, 0);
+    transform: translate3D(0, 0, 0);
 }
 
 .nav-title {
@@ -604,19 +604,19 @@ body.nav-opened .nav {
     background: rgb(150,150,150);
     top: 15px;
     -webkit-transition: background 0.15s ease;
-            transition: background 0.15s ease;
+    transition: background 0.15s ease;
 }
 
 .nav-close:before {
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .nav-close:after {
     -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .nav-close:hover:before,
@@ -737,7 +737,7 @@ body.nav-opened .nav {
 }
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
-   on photos which happen to have a light background. */
+on photos which happen to have a light background. */
 .home-template .main-header:after {
     display: block;
     content: " ";
@@ -765,6 +765,7 @@ body.nav-opened .nav {
     float: left;
     background: none !important;
     border: none !important;
+    border: #bfc8cd 1px solid;
 }
 
 .blog-logo img {
@@ -774,7 +775,7 @@ body.nav-opened .nav {
     display: block;
     height: 144px;
     width: 144px;
-    opacity: 0.6;
+    opacity: 0.6;        
     /*
     border: #bfc8cd 1px solid;
     */
@@ -814,8 +815,8 @@ body.nav-opened .menu-button {
     border-color: #111 !important;
     color: #fff !important;
     -webkit-transform: translate3D(94px, 0, 0);
-        -ms-transform: translate3D(94px, 0, 0);
-            transform: translate3D(94px, 0, 0);
+    -ms-transform: translate3D(94px, 0, 0);
+    transform: translate3D(94px, 0, 0);
     transition: all 0.3s ease;
 }
 body.nav-opened .menu-button .word {
@@ -1042,11 +1043,11 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
-   5. Single Post - When you click on an individual post
-   ========================================================================== */
+5. Single Post - When you click on an individual post
+========================================================================== */
 
 .post-template .post-header {
-   margin-bottom: 3.4rem;
+    margin-bottom: 3.4rem;
 }
 
 .post-template .post-title {
@@ -1064,8 +1065,8 @@ body:not(.post-template) .post-title {
 }
 
 /* Stop elements, such as img wider than the post content, from
-   creating horizontal scroll - slight hack due to imperfections
-   with browser width % calculations and rounding */
+creating horizontal scroll - slight hack due to imperfections
+with browser width % calculations and rounding */
 .post-template .content {
     overflow: hidden;
 }
@@ -1083,16 +1084,16 @@ body:not(.post-template) .post-title {
 }
 
 /* Keep images centered, and allow images wider than the main
-   text column to break out. */
+text column to break out. */
 .post-content img {
     display: block;
     max-width: 100%;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
-       center of its container and (2) shifting the entire image
-       in the opposite direction by half its own width.
-       Works for images that are larger than their containers. */
+    center of its container and (2) shifting the entire image
+    in the opposite direction by half its own width.
+    Works for images that are larger than their containers. */
     position: relative;
 }
 
@@ -1148,9 +1149,9 @@ body:not(.post-template) .post-title {
 }
 
 /* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
+Doing it like this means it's easier for the author bio
+to be flexible at smaller screen sizes while the share
+links remain at a fixed width the whole time */
 .post-footer .share {
     position: absolute;
     top: 6rem;
@@ -1172,8 +1173,8 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
-   6. Author profile
-   ========================================================================== */
+6. Author profile
+========================================================================== */
 
 .post-head.main-header {
     height: 65vh;
@@ -1298,14 +1299,14 @@ body:not(.post-template) .post-title {
 }
 
 /* Turn off meta for page2+ to make room for extra
-   pagination prev/next links */
+pagination prev/next links */
 .archive-template .author-profile .author-meta {
     display: none;
 }
 
 /* ==========================================================================
-   7. Third Party Elements - Embeds from other services
-   ========================================================================== */
+7. Third Party Elements - Embeds from other services
+========================================================================== */
 
 /* Github */
 .gist table {
@@ -1325,8 +1326,8 @@ body:not(.post-template) .post-title {
 }
 
 /* ==========================================================================
-   8. Pagination - Tools to let you flick between pages
-   ========================================================================== */
+8. Pagination - Tools to let you flick between pages
+========================================================================== */
 
 /* The main wrapper for our pagination links */
 .pagination {
@@ -1411,8 +1412,8 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
-   9. Footer - The bottom of every page
-   ========================================================================== */
+9. Footer - The bottom of every page
+========================================================================== */
 
 .site-footer {
     position: relative;
@@ -1492,14 +1493,14 @@ body:not(.post-template) .post-title {
 }
 
 /* ==========================================================================
-   10. Media Queries - Smaller than 900px
-   ========================================================================== */
+10. Media Queries - Smaller than 900px
+========================================================================== */
 
 @media only screen and (max-width: 900px) {
 
     /*section.post-excerpt {
-        padding: 20px;
-    }*/
+    padding: 20px;
+}*/
 
     header.post-header {
         padding: 20px 20px 0 20px;
@@ -1640,8 +1641,8 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
-   11. Media Queries - Smaller than 500px
-   ========================================================================== */
+11. Media Queries - Smaller than 500px
+========================================================================== */
 
 @media only screen and (max-width: 500px) {
 
@@ -1909,8 +1910,8 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
-   12. Animations
-   ========================================================================== */
+12. Animations
+========================================================================== */
 
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {
@@ -1942,97 +1943,97 @@ body:not(.post-template) .post-title {
 @-webkit-keyframes bounce {
     0%, 10%, 25%, 40%, 50% {
         -webkit-transform: translateY(0) ;
-                transform: translateY(0) ;
+        transform: translateY(0) ;
     }
     20% {
         -webkit-transform: translateY(-10px) ;
-                transform: translateY(-10px) ;
+        transform: translateY(-10px) ;
     }
     30% {
         -webkit-transform: translateY(-5px) ;
-                transform: translateY(-5px) ;
+        transform: translateY(-5px) ;
     }
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         -webkit-transform: translateY(0) ;
-                transform: translateY(0) ;
+        transform: translateY(0) ;
     }
     40% {
         -webkit-transform: translateY(-10px) ;
-                transform: translateY(-10px) ;
+        transform: translateY(-10px) ;
     }
     60% {
         -webkit-transform: translateY(-5px) ;
-                transform: translateY(-5px) ;
+        transform: translateY(-5px) ;
     }
 }
 
 
 /* ==========================================================================
-   End of file. Animations should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
-   ========================================================================== */
+End of file. Animations should be the last thing here. Do not add stuff
+below this point, or it will probably fuck everything up.
+========================================================================== */
 
 /* ---- reset ---- */
 
 body {
-  margin: 0;
-  /*font: normal 75% Arial, Helvetica, sans-serif;*/
+    margin: 0;
+    /*font: normal 75% Arial, Helvetica, sans-serif;*/
 }
 
 canvas {
-  display: block;
-  vertical-align: bottom;
+    display: block;
+    vertical-align: bottom;
 }
 /* ---- particles.js container ---- */
 
 #particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #2FA7DC;
-  background-image: url("../images/screen.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2FA7DC;
+    background-image: url("../images/screen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 /* ---- stats.js ---- */
 
 .count-particles {
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .js-count-particles {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 #stats,
 .count-particles {
-  -webkit-user-select: none;
-  margin-top: 5px;
-  margin-left: 5px;
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 #stats {
-  border-radius: 3px 3px 0 0;
-  overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
 }
 
 .count-particles {
-  border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
 }
 
 
