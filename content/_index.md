@@ -13,5 +13,4 @@ Welcome to **cloud-architecture.io**, a free resource about good development and
 
 This site is brand new, so there's not much content yet!
 
-This is cool!
 
