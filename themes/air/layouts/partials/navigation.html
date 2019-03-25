@@ -3,6 +3,7 @@
 {{ else  }}
 <div class="site-header">
 {{end}}
+    
 <nav class="navbar">
     
     {{ $currentPage := . }}
@@ -14,18 +15,22 @@
     {{end}}  
     
     <!-- home link -->
-    <a class="nav-link" href="/" title="Home">Home</a> 
+    <a class="nav-link" href="/" title="Home"><i class="fas fa-home"></i> Home</a> 
     
     {{ range .Site.Menus.main }}     
 
         {{ if eq .Page nil }}
            <!-- hide sections, only show pages -->
         {{ else }}
-            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a> 
+            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}"><i class="fas fa-{{.Page.File.BaseFileName}}"></i> {{ .Name }}</a> 
         {{ end }}
     
     {{ end }}
          
+    
+    <a class="nav-link-right" href="{{.Site.Params.gitbase}}{{.File.Path}}" target="_blank"><i class="fas fa-edit"></i> Edit</a>        
+    
+    
   </nav>
 </div>     
 

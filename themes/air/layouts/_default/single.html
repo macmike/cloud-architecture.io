@@ -4,8 +4,7 @@
 
 
   <main id="content" class="content" role="main">
-
-
+      
   <article class="post {{ .Section }}">
 
     <header class="post-header">
@@ -21,9 +20,10 @@
          {{ end }}
         </section>
     </header>
-
+      
     <section class="post-content">
-      {{ .Content }}
+      {{ .Content }}            
+        <a href="{{.Site.Params.gitbase}}{{.File.Path}}" class="button" target="_blank"><i class="fas fa-edit"></i> <strong>Edit</strong> this page</a>        
     </section>
 
 

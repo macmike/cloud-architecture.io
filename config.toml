@@ -17,6 +17,6 @@ sectionPagesMenu = "main"
   googleAnalyticsUserID = ""
   githubName = "macmike"
   twitterName = "mikemacd"
-  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = false 
+  gitbase = "https://github.com/macmike/cloud-architecture.io/tree/master/content/"
 
