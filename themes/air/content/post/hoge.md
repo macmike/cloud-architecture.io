@@ -2,8 +2,9 @@
 author = "syui"
 comments = false
 date = "2016-01-01"
-draft = false
+draft = true
 image = ""
+tags = ["tag1","tag2"]
 menu = ""
 share = false
 slug = "test"

@@ -12,6 +12,14 @@ author = "Mike"
 
 Welcome to **cloud-architecture.io**, a free resource about good development and architectural practices for Cloud. You can edit this page, and anything else on this site, it's all hosted as [markdown](https://en.wikipedia.org/wiki/Markdown) on [github](https://github.com/macmike/cloud-architecture.io).
 
-This site is brand new, so there's not much content yet!
+### What is Cloud
 
+Cloud is...
 
+### Why is Cloud Architecture different?
+
+Because...
+
+### So why this site?
+
+A lot of people are coming to Cloud architecure from a mix of different backgrounds, many are self-taught developers, many are infrastructure engineers and others are security specialists. That merging of skills means that there's a lot of assumed knowledge that sometimes people just don't know yet. This site, is for sharing that knowledge.
