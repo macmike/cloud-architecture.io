@@ -6,8 +6,9 @@ tags = ["tag1","tag2"]
 image = ""
 comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
-menu= "main"		# set "main" to add this content to the main menu
+menu= ""		# set "main" to add this content to the main menu
 author = "Mike"
+weight = 100
 +++
 
 TBC: Intro to architecture

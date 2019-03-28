@@ -1,5 +1,5 @@
 +++
-title = "Scripting Coding"
+title = "Scripting / Coding"
 date = 2019-03-27T11:06:57Z
 draft = false
 tags = ["tag1","tag2"]
