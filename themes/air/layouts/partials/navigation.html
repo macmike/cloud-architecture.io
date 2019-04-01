@@ -4,18 +4,22 @@
 <div class="site-header">
 {{end}}
     
-<nav class="navbar">
+<nav class="navbar" id="navbar">
     
     {{ $currentPage := . }}
     
     <!-- logo -->
     {{ if .Site.Params.logo }}
+    <div class="nav-section">
         <a class="navbar-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Blog Logo" /></a>
         <span class="navbar-spacer">&nbsp;</span>
+    </div>
     {{end}}  
     
     <!-- home link -->
-    <a class="nav-link" href="/" title="Home"><i class="fas fa-home"></i> Home</a> 
+    <div class="nav-section">
+        <a class="nav-link" href="/" title="Home"><i class="fas fa-home"></i> Home</a> 
+    </div>
     
     {{ range .Site.Menus.main }}     
        
@@ -26,30 +30,39 @@
                 <!-- Hide "Pages" section -->
             {{ else }}
                 <!-- Render section menu -->
-                <div class="nav-dropdown">
-                <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}</a>
-                {{if .Children }}    
-                    <!-- Render section children dropdown -->
-                  <div class="nav-dropdown-content">
-                    {{ range .Children }}
-                        <a href="{{ .URL }}">{{ .Name }}</a>
-                    {{ end }}                
-                  </div>
-                {{ end }}
+                <div class="nav-section">
+                    <div class="nav-dropdown">
+                            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}</a>
+                            {{if .Children }}    
+                                <!-- Render section children dropdown -->
+                              <div class="nav-dropdown-content">
+                                {{ range .Children }}
+                                    <a href="{{ .URL }}">{{ .Name }}</a>
+                                {{ end }}                
+                              </div>
+                            {{ end }}
+                    </div>
                 </div>       
             {{ end }}
     
         {{ else }}
         <!-- If a stand-alone page -->
+        <div class="nav-section">
             <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}"><i class="fas fa-{{.Page.File.BaseFileName}}"></i> {{ .Name }}</a> 
+        </div>
         {{ end }}
     
     {{ end }}
          
+    <div class="nav-section nav-section-right menubar-icon">
+        <a class="nav-link" href="javascript:void(0);" onclick="menubarBurgerClick()">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
     
-    <a class="nav-link-right" href="{{.Site.Params.gitbase}}{{.File.Path}}" target="_blank"><i class="fas fa-edit"></i> Edit</a>        
-    
-    
+    <div class="nav-section nav-section-right">
+        <a class="nav-link" href="{{.Site.Params.gitbase}}{{.File.Path}}" target="_blank"><i class="fas fa-edit"></i> Edit</a>        
+    </div>
   </nav>
 </div>     
 
