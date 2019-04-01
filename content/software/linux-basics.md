@@ -6,6 +6,10 @@ tags = ["tag1","tag2"]
 image = ""
 comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
-menu= ""		# set "main" to add this content to the main menu
-author = "Mike"
+weight = 500
+
+[menu.main] 
+    Name = "Linux Basics" 
+    identifier = "linux-basics"
+    parent = "software"
 +++
