@@ -1,3 +1,14 @@
+/* main content */
+
+.img-inline-right{
+    float: right;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-width: 0px;
+    border-style: solid;
+}
+
+/* header and navigation *********/
 .site-header {
      background-color: rgba(22, 33, 74, 0.77);
      z-index: 998;
@@ -137,10 +148,8 @@
          display: none;
      }
 }
-/****************************************************/
-/***** Contributor */
-/************************************************************************/
-/****** buttons */
+
+/* Edit me button */
  a.button{
      background: #4255de;
      border-radius: 10px;
