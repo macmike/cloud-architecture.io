@@ -14,7 +14,7 @@ Welcome to **cloud-architecture.io**, a free resource about good development and
 
 ### What is Cloud
 
-Cloud Computing is the on-demain delivery of compute power, storage, databases, applictions, artificial intelligence, machine learning and other IT resources over the internet with pay-as-you-go pricing. 
+Cloud Computing is the on-demand delivery of compute power, storage, databases, applictions, artificial intelligence, machine learning and other IT resources over the internet with pay-as-you-go pricing. 
 
 The term "Cloud" is generally used to encompass this technology, ecosystem of platforms and tools as well as ways-of-working and architectural approaches that make the best use of Cloud technology.
 
