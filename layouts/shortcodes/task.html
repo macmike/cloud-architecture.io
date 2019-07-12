@@ -1,0 +1,19 @@
+{{ $currindex := int (.Get "number") }}
+
+    <div id="task{{.Get "number" }}" class="mmdTab">
+
+        <p class="task_header"><strong>{{.Get "number" }}. {{.Get "title" }}</strong><br />
+            {{.Get "description" }}.
+        </p>
+        
+        {{ .Inner }}
+        
+        {{ if .Get "shownext"}}
+        <br/>
+        <div class="w3-btn w3-black">
+            <center>
+                <button class="w3-bar-item w3-button" onclick="openTab('task{{ add $currindex 1 }}')">Next Step</button>
+            </center>
+        </div>
+        {{ end }}
+    </div>

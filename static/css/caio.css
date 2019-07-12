@@ -179,3 +179,14 @@
      background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
 }
  
+
+/*  Tutorial stuff */
+.task_header {
+    padding-left: 3cm;
+    padding-right: 3cm;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    font-size: 110%;
+    background-color: #d1cfcf;
+    text-align: center;
+}

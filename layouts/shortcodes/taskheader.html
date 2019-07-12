@@ -1,0 +1,5 @@
+    <div class="w3-bar w3-black">
+        {{ range $index, $element := .Params }}
+        <button class="w3-bar-item w3-button tablink" onclick="openTab('task{{ add $index 1 }}')" id="task{{ add $index 1 }}_tablink">{{ add $index 1 }} . {{ $element }}</button>
+        {{ end }}
+    </div>

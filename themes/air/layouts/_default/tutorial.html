@@ -1,0 +1,96 @@
+{{ partial "header.html" . }}
+{{ $baseurl := default "/" .Site.BaseURL }}
+
+    <script lang="javascript">
+        
+        //tab management
+        function openTab(tabName) {
+            var i;
+            var x = document.getElementsByClassName("mmdTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" w3-grey", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName+"_tablink").className += " w3-grey";
+            window.scrollTo(0,0);
+        }
+    </script>
+
+  <main id="content" class="content" role="main">
+      
+  <article class="post {{ .Section }}">
+
+    <header class="post-header">
+        <h1 class="post-title">{{.Title}}</h1>
+        <section class="post-meta">
+        {{ if eq .Section "post"}}
+	<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+        {{end}}
+         {{ range .Params.tags }}
+          <span class="post-tag small"><a href="{{$baseurl}}tags/{{ . | urlize }}/">#{{ . }}</a></span>
+         {{ end }}
+        </section>
+    </header>
+      
+    <section class="post-content">
+      {{ .Content }}            
+        <a href="{{.Site.Params.gitbase}}{{.File.Path}}" class="button" target="_blank"><i class="fas fa-edit"></i> <strong>Edit</strong> this page</a>        
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    {{if .Site.Params.logo}}
+    <figure class="author-image">
+
+        <a class="img" href="{{$baseurl}}" style="background-image: url({{$baseurl}}{{.Site.Params.logo}})"><span class="hidden">{{ .Site.Params.author }}</span></a>
+    </figure>
+    {{end}}
+
+    {{ partial "author.html" . }}
+
+    {{ if ne .Params.share false}}
+    <section class="share">
+      <h4>Share:</h4>
+      <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text={{ .Title | safeHTML}}&amp;url={{ .Permalink }}"
+          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <span class="hidden">Twitter</span>
+      </a>
+      <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+          onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <span class="hidden">Facebook</span>
+      </a>
+      <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url={{ .Permalink }}"
+         onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <span class="hidden">Google+</span>
+      </a>
+    </section>
+    {{end}}
+
+    {{ if ne .Params.comments false}}
+    {{ with .Site.DisqusShortname }}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = '{{ . }}';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {{ end }}
+    {{ end }}
+
+  </footer>
+</article>
+
+</main>
+{{ partial "footer.html" . }}

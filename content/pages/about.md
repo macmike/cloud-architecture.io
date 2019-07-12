@@ -8,7 +8,7 @@ comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
 menu = "main"
 author = "Mike"
-weight = 500
+weight = 600
 +++
 
 ### How does it work
