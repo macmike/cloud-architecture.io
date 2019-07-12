@@ -6,14 +6,15 @@
             {{.Get "description" }}.
         </p>
         
-        {{ .Inner }}
+        {{ .Inner | markdownify }}
         
         {{ if .Get "shownext"}}
         <br/>
+        <center>
         <div class="w3-btn w3-black">
-            <center>
                 <button class="w3-bar-item w3-button" onclick="openTab('task{{ add $currindex 1 }}')">Next Step</button>
-            </center>
         </div>
+        </center>
+        <br/>
         {{ end }}
     </div>
