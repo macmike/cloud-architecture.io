@@ -57,6 +57,14 @@ When doing up front architecture, especially in the form of documents and models
 
 **Architectural models and documentation do not constitute progress. Good architecture is working software, and that’s progress.**
 
+#### Levels of Architecture?
+
+Architecture can be thought of in three levels:
+
+* **Enterprise Architecture** applies architecture principles and practices to guide organizations through the business, information, process, and technology changes necessary to execute their strategies
+* **Solution Architecture** applies architecture principles and practices, addressing structure, behavior and aesthetics, to a related set of products (or system-of-systems) that collectively generate business value through their end-to-end use. Solution architecture focuses on integration and behaviour.
+* **System Architecture** applies architecture principles and practices to a particular software system focusing on structure and behavior to address functional and non-functional requirements (usability, reliability, performance and scalability etc.).
+
 #### How does Cloud change Architecture? ####
 
 Traditional architecture practices are there to reduce risk. Often that risk is simply the cost of being wrong. That cost was often in infrastructure, servers and software. Because Cloud Computing makes all of things temporary, the cost of being wrong, and trying something new is greatly reduced. When it can take just a few hours to create a large set of infrastructure to try and idea, it's more expensive to have a half-day meeting about a problem than to simply try it and throw it away afterwards, only paying for the temporary resources used to prove something.
