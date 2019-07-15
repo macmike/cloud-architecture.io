@@ -6,12 +6,20 @@
 
 /* main content */
 
+.img-800-center{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    border-width: 0px;
+    border-style: none;
+}
+
 .img-inline-right{
     float: right;
     margin-left: 8px;
     margin-right: 8px;
     border-width: 0px;
-    border-style: solid;
+    border-style: none;
 }
 
 /* header and navigation *********/
