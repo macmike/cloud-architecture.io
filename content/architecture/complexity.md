@@ -56,3 +56,20 @@ Part of the job of architecture is to reduce complexity. When working in high co
 * **estimation** -  By the nature of the complexity estimations will all be extremely uncertain. Numbers may be significant orders of magnitude out. Instead organizations are better off funding experimentation in a number of timeboxes to see how much complexity can be produced in those timeboxes through spiking and experiments.
 
 
+When working with high complexity architecture, standard Enterprise Architecture (if it exists) may need to be abandoned to deal with emergent behavior. However, the cost of not using Enterprise Architecture should not be considered as an inhibitor to high complexity work if the business opportunity is significant enough.
+ 
+In Solution (multi-system) Architecture for high complexity architectures, a common dysfunction is to try and connect all of the architectural information and system architectures. We’ve seen organizations create massive over-complicated models that try and resolve integration complexity by documenting it all. Well-meaning, but ineffective and wasteful. This approach is counter-productive because the complexity comes not from the number of items, but the dynamism of their interactions and unpredictable aggregate behavior. These large models are, at best, a snapshot view of complexity at a single point in time but they don’t help anyone solve the problems. 
+ 
+Instead, when working with high complexity Solution and System Architectures we recommend architecting for change, not solution requirements. By that we mean that since requirements, scope and emergent behavior are so likely to change the only thing we really know the architecture needs to support is change. Therefore, focus on the principle, technology and mechanisms that enable change such as: 
+
+* High cohesion, low coupling principles
+* Integration architecture (message passing, queueing, elastic deployment, discovery, data formats
+* The, relatively simpler, complicated parts
+* Possible reduction in complexity through low algorithmic complexity, refactoring out components, heuristic approaches
+* Use of serverless/event-driven architectures to facilitate changing approach
+* Focus on data flow, not structure of services
+* Use cloud managed services to reduce complexity and infrastructure management wherever possible to allow more effort to be spent on the business problem
+
+Since the behavior and properties of high complexity systems are emergent we recommend creating a “pull” towards Business Value through rapid, preferably continuous, integration and deployment. Creating measures that reflect desired outcomes (not intermediary stages or logical decomposition) and test every change in terms of moving towards or away from “good” emergent behavior. 
+ 
+At the extreme end of this high complexity scale, using machine learning and evolutionary techniques to generate possible solutions and test for emergent properties can be useful to speed up iteration cycles. 
