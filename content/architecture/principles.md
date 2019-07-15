@@ -2,7 +2,6 @@
 title = "Principles"
 date = 2019-03-27T11:02:38Z
 draft = false
-tags = ["tag1","tag2"]
 image = ""
 comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
@@ -28,6 +27,7 @@ Having a common understanding of architecture, regardless of the format of that 
 * Well described Services: modular elements have simple expressive meaningful names enabling readers to quickly understand their purpose
 * Runs and passes all defined tests or acceptance criteria
 * Lightweight documentation
+* Use Infrastructure-as-Code
 
 Some additional Cloud Architecture Principles that are often useful:
 
