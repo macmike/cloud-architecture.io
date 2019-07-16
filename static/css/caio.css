@@ -41,16 +41,7 @@ h3, h4 {
      display: block;
      font-family: arial;
 }
- .site-header-home {
-     background-color: rgba(43, 51, 82, 0.6);
-     z-index: 998;
-     position: fixed;
-     top: 0;
-     height: 30px;
-     width: 100%;
-     display: none;
-     font-family: arial;
-}
+
  .site-header a:hover {
      color: #afadad;
      text-decoration: none;
