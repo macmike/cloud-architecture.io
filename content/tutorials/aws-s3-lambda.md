@@ -17,11 +17,7 @@ weight = 600
 +++
 
 
-
 {{< tutorial_header "Introduction" "S3" "Lambda" "Security" "Coding" "Send to API" "Client">}}
- 
-
-
 
 
 
@@ -133,7 +129,7 @@ In the AWS Console, go to IAM and select Roles
   
     *The only difference should be your bucket name*
 
-{{< tutorial_codebox json>}}
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -145,7 +141,7 @@ In the AWS Console, go to IAM and select Roles
         }
     ]
 }
-{{< /tutorial_codebox >}}
+```
 
 6. Select Review Policy
 
