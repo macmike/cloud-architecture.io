@@ -167,6 +167,81 @@ The only permission required is PutObject and you should restrict it to just the
 
 {{< figure src="/images/tutorials/aws-s3-lambda/awss3lambda_open_function.png" alt="Open the function" class="tutorial_image">}}
 
+
+1. Go back to your Lambda function code
+
+    Be wary, there are a couple of deliberate bugs in part of this **code**, if you get stuck ask for help, don't get frustrated! The steps with **bugs** are labelled so you'll know where there might be problems.
+    
+* You'll need to add some import statements to your function code:	
+
+```python
+import boto3, json                                     
+```
+
+* Work out which S3 object in the source bucket has triggered lambda
+
+```python
+sourceKey = event['Records'][0]['s3']['object']['key'] 
+sourceBucket = event['Records'][0]['s3']['bucket']['name'] 
+print("s3 object: " + sourceBucket + "/" + sourceKey)               
+```
+
+* Read the uploaded file from S3 (**bug**)
+
+```pythons3 = boto3.resource('s3')
+obj = s3.Object(a_bucket, a_key) 
+sourceText = obj.get()["Body"].read().decode('utf-8')               
+```
+                    
+* Call comprehend to analyse the text (**bug**)
+
+```python
+comprehend = boto3.client(service_name='comprehend')
+sentiment = comprehend.detect_sentiment(Text=sourceText, LanguageCode='en')
+keyPhrases = comprehend.detect_key_phrases(Text=sourceText, LanguageCode='en')   
+```
+                    
+* Build a new object that combines all of the data
+
+    **Important!** Don't change this bit, the exact format is important for later.
+
+```python
+targetData = json.dumps({
+    'sourceKey': sourceKey, 
+    'sourceBucket': sourceBucket, 
+    'sourceText': sourceText,
+    'sentiment': sentiment,
+    'keyPhrases': keyPhrases
+})        
+```
+                    
+* Write the results to the target bucket (bug)
+
+```python
+newObj = s3.Object(targetBucket, targetKey) 
+newObj.put(Body=targetData)
+print("processed data: "+ targetData)    
+```
+
+Test your code by uploading a small text file to the source bucket, via the AWS console.
+
+You can see the output of your function in CloudWatch logs.
+{{< figure src="/images/tutorials/aws-s3-lambda/awss3lambda_lambda_test_event.png" alt="Debug event" class="tutorial_image">}}
+* Debugging your function
+
+    Because there's some bugs it won't work at first. Instead of uploading a file every time you want to test your function, you can create a test event
+    
+* Use the Select a test event drop-down next to the Test button at the top of the Lambda page
+  * Select `Configure Test Events`
+  * Select `Amazon S3 Put` as the template event
+  * Edit the `S3Bucket.Name`, `S3.arn` and `S3.object.key` fields to reference your bucket name and the name of the sample file you uploaded earlier
+  * Give your test event a name
+  * You can now re-run the effect of the file upload by just pressing the Test button
+  
+	
+
+If it works then you should see a new file in your target bucket which you can open to see the resulting JSON.
+
 {{< /tutorial_section >}}
 
 
@@ -179,6 +254,37 @@ The only permission required is PutObject and you should restrict it to just the
 
 I've exposed an API that you can send your data to, a lambda function will be triggered that will put the data into an ElasticSearch instance, updating the Kibana dashboard.
 
+* Add some new import statements to the top of your function
+
+``` python
+import urllib
+from botocore.vendored import requests
+```
+
+* Towards the bottom of your code, after you've created all of the target data, but before you've sent the lambda return status, add a the following to call the API at `https://api.cy8er.com/sendToElasticSearch`
+    
+    Don't forget to change your username from mike to your name in the first line!	 
+   
+``` python
+userparam = 'user=mike'
+encodedData = urllib.parse.quote_plus(targetData)
+api = 'https://api.cy8er.com/sendToElasticSearch?'
+dataparam = '&data='+encodedData
+api_response = requests.get(api+userparam+dataparam)
+```
+
+* To check that the API is responding properly, you can add some print statements and check the CloudWatch logs
+
+``` python
+  print("api code: " + str(api_response.status_code))
+  print("api response: " + str(api_response.text))
+```
+
+**Congratulations!**
+
+You've completed the workshop and now everytime you upload a file
+you should see the dashboard on the board update :)
+
 {{< /tutorial_section >}}
 
 
@@ -186,7 +292,7 @@ I've exposed an API that you can send your data to, a lambda function will be tr
 
 
 
-{{< tutorial_section number="7" title="Client" description="Send a snippet" shownext="true">}}
+{{< tutorial_section number="7" title="Client" description="Send a snippet" shownext="false">}}
 
 
 {{< /tutorial_section >}}
