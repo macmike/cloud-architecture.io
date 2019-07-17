@@ -19,22 +19,19 @@
     </div>
     
     {{ range .Site.Menus.main }}     
-       
-        {{ if eq .Page nil }}
-        <!-- If a section -->
     
+        <!-- Render section menu -->
             {{ if eq .Name "Pages"}}
                 <!-- Hide "Pages" section -->
             {{ else }}
-                <!-- Render section menu -->
                 <div class="nav-section">
                     <div class="nav-dropdown">
-                            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}"> {{ .Name }}</a>
+                            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .Page.Permalink }}" title="{{ .Title }}"> {{ .Name }}</a>
                             {{if .Children }}    
                                 <!-- Render section children dropdown -->
                               <div class="nav-dropdown-content">
                                 {{ range .Children }}
-                                    <a href="{{ .URL }}">{{ .Name }}</a>
+                                    <a href="{{ .Page.Permalink }}">{{ .Name }}</a>
                                 {{ end }}                
                               </div>
                             {{ end }}
@@ -42,12 +39,6 @@
                 </div>       
             {{ end }}
     
-        {{ else }}
-        <!-- If a stand-alone page -->
-        <div class="nav-section">
-            <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}"><i class="fas fa-{{.Page.File.BaseFileName}}"></i> {{ .Name }}</a> 
-        </div>
-        {{ end }}
     
     {{ end }}
          
