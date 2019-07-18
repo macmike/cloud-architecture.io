@@ -250,6 +250,14 @@ h3, h4 {
 	margin-bottom:5px;
 }
 
+#latest_snippets{
+    border: single 1px;
+}
+#latest_snippets li{
+    margin: 0 0 0 0;
+    font-size: 0.8em;
+    line-height: 1.1em;
+}
 
 
 /*------ throbber ------------- */

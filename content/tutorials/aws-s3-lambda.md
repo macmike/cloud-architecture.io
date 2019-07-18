@@ -295,58 +295,97 @@ you should see the dashboard on the board update :)
 {{< tutorial_section number="7" title="Client" description="Send a snippet" >}}
 
 <script language="javascript">
-        const APIurl = "https://api.cloud-architecture.io/processSnippet?user=client&snippet=";
-            
-        //upload to AWS and start looking for results
-        function sendSnippet(){
+    
+    const APIurl = "https://api.cloud-architecture.io/processSnippet?user=client&snippet=";
+    
+    //upload to AWS and start looking for results
+    function sendSnippet(){
+        resultTimeout = 2000; //time before resetting form
 
-            resultTimeout = 2000; //time before resetting form
-            
-            var snippetText = $('#snippetText').val();
-            snippetText = encodeURIComponent(snippetText);
-            
-            var apiCall = APIurl + snippetText;
-            console.log("calling: " + apiCall);                
-            showSpinnyThing();
+        var snippetText = $('#snippetText').val();
+        snippetText = encodeURIComponent(snippetText);
 
-            $.get(apiCall, function(data) {
+        var apiCall = APIurl + snippetText;
+        console.log("calling: " + apiCall);                
+        showSpinnyThing();
 
-                //Got some data
-                console.log('server returned');                    
-                hideSpinnyThing();    
-                $('#tutorial_form_wrapper').hide();
-                window.scrollTo(0,0);
-                $('#textSubmittedWrapper').show();
-                console.log(data);                        
-                setTimeout(function(){                        
-                    resetForm();
-                },resultTimeout);
-            });            
-
-        }
-
-        function resetForm(){                                
-            $('#tutorial_form_wrapper').show();
-            $('#textSubmittedWrapper').hide();
+        $.get(apiCall, function(data) {
+            //Got some data                    
+            hideSpinnyThing();    
+            console.log(data);   
             $('#snippetText').val("");
-        }
+        });            
+
+    }
 
 
-        //show the spinny thing
-        function showSpinnyThing(){
-            $('#snippetText').fadeTo( "fast" , 0.2);
-            $('#throbber_wrapper').show();
-            $("#progress_text").html("thinking...");   
-        }
+    //show the spinny thing
+    function showSpinnyThing(){
+        $('#snippetText').fadeTo( "fast" , 0.2);
+        $('#throbber_wrapper').show();
+        $("#progress_text").html("thinking...");   
+    }
 
-        //hide the spinny thing
-        function hideSpinnyThing(){
-            $('#snippetText').fadeTo( "fast" , 1.0);
-            $("#throbber_wrapper").hide();                                      
-        }            
+    //hide the spinny thing
+    function hideSpinnyThing(){
+        $('#snippetText').fadeTo( "fast" , 1.0);
+        $("#throbber_wrapper").hide();                                      
+    }          
+    
+    function formatDate(date) {
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      var strTime = hours + ':' + minutes + ' ' + ampm;
+      return date.getDate() + "/" + (date.getMonth()+1 ) + "/" + date.getFullYear() + "  " + strTime;
+    }
+    
+    //Getting latest snippets
+    //called by template when the last tab is opened
+    const LatestNum = 5;
+    const LatestAPIurl = "https://api.cloud-architecture.io/getRecentESEntries?num="+LatestNum;
+    function updateTutorialResults(){
+        resultTimeout = 5000; //time before resetting form
+
+        $.get(LatestAPIurl, function(data) {
+
+            //Got some data
+            console.log('Getting latest ES entries..');                    
+            //console.log(data);             
+            
+            for (var i=1;i<LatestNum+1;i++){
+               $("#snip"+i).empty();
+               if (i<data.totalhits+1){
+                    var item = data.hits[i-1]._source;
+                    //console.log(item);
+                    var aDateTime = new Date(item["@timestamp"]);
+                    var aDateTimeText = formatDate(aDateTime);
+                    $("#snip"+i).text(aDateTimeText + ": "+ item.username + ": "+item.sourceText);
+               } else {
+                    $("#snip"+i).text(i + " - none");
+               }
+            }
+            
+            UpdateResultsTimeout = setTimeout(function(){                        
+                updateTutorialResults();
+            },resultTimeout);
+        });  
+    }
 </script>
 
-
+<p>Latest snippets:</p>
+<div id="latest_snippets" class="latest_snippets">
+    <ul>
+        <li id="snip1">1</li>
+        <li id="snip2">2</li>
+        <li id="snip3">3</li>
+        <li id="snip4">4</li>
+        <li id="snip5">5</li>
+    </ul>
+</div>
 <div id="tutorial_form_wrapper">
      <center>        
         <form id="frmTextAnalysis">      
@@ -380,16 +419,5 @@ you should see the dashboard on the board update :)
 </div> <!-- form wrapper -->
             
                 
-<div id="textSubmittedWrapper" style="display:none">
-    <center>
-        <h4>Snippet Submitted</h4>
-        <p>Thankyou.</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-    </center>
-</div>
 
 {{< /tutorial_section >}}

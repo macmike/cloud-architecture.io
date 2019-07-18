@@ -3,6 +3,7 @@
 
     <script lang="javascript">
         
+        var UpdateResultsTimeout;
         //tab management
         function openTab(tabName) {
             var i;
@@ -17,6 +18,13 @@
             document.getElementById(tabName).style.display = "block";
             document.getElementById(tabName+"_tablink").className += " w3-grey";
             window.scrollTo(0,0);
+            if (tabName === "task"+x.length){
+                //console.log(tabName + ' - is result tab!');
+                updateTutorialResults(); //needs to be defined in front matter
+            } else {
+                //console.log(tabName + ' - not result tab');
+                clearTimeout(UpdateResultsTimeout);
+            }
         }
         
         function initTabs(){
