@@ -268,7 +268,7 @@ from botocore.vendored import requests
 ``` python
 userparam = 'user=mike'
 encodedData = urllib.parse.quote_plus(targetData)
-api = 'https://api.cy8er.com/sendToElasticSearch?'
+api = 'https://api.cloud-architecture.io/sendToElasticSearch?'
 dataparam = '&data='+encodedData
 api_response = requests.get(api+userparam+dataparam)
 ```
@@ -292,7 +292,104 @@ you should see the dashboard on the board update :)
 
 
 
-{{< tutorial_section number="7" title="Client" description="Send a snippet" shownext="false">}}
+{{< tutorial_section number="7" title="Client" description="Send a snippet" >}}
 
+<script language="javascript">
+        const APIurl = "https://api.cloud-architecture.io/processSnippet?user=client&snippet=";
+            
+        //upload to AWS and start looking for results
+        function sendSnippet(){
+
+            resultTimeout = 2000; //time before resetting form
+            
+            var snippetText = $('#snippetText').val();
+            snippetText = encodeURIComponent(snippetText);
+            
+            var apiCall = APIurl + snippetText;
+            console.log("calling: " + apiCall);                
+            showSpinnyThing();
+
+            $.get(apiCall, function(data) {
+
+                //Got some data
+                console.log('server returned');                    
+                hideSpinnyThing();    
+                $('#tutorial_form_wrapper').hide();
+                window.scrollTo(0,0);
+                $('#textSubmittedWrapper').show();
+                console.log(data);                        
+                setTimeout(function(){                        
+                    resetForm();
+                },resultTimeout);
+            });            
+
+        }
+
+        function resetForm(){                                
+            $('#tutorial_form_wrapper').show();
+            $('#textSubmittedWrapper').hide();
+            $('#snippetText').val("");
+        }
+
+
+        //show the spinny thing
+        function showSpinnyThing(){
+            $('#snippetText').fadeTo( "fast" , 0.2);
+            $('#throbber_wrapper').show();
+            $("#progress_text").html("thinking...");   
+        }
+
+        //hide the spinny thing
+        function hideSpinnyThing(){
+            $('#snippetText').fadeTo( "fast" , 1.0);
+            $("#throbber_wrapper").hide();                                      
+        }            
+</script>
+
+
+<div id="tutorial_form_wrapper">
+     <center>        
+        <form id="frmTextAnalysis">      
+            <!-- other comments text box -->
+            <p>Send some text directly to the API</p>      
+            <textarea placeholder="some text" id="snippetText" name="snippetText" rows="4" class="roboText"></textarea><br/><br/>
+            <!-- submit -->
+            <div class="form_buttons">
+                <div class="w3-btn w3-black">
+                    <button type="button" class="w3-bar-item w3-button" onclick="sendSnippet()">Send</button>
+                </div>
+            </div>
+            <br/>
+        </form>
+        <!-- throbber -->
+    <div class="throbber_wrapper" id="throbber_wrapper" style="display:none">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>       
+        <div id="progress_text" class="very_good"></div>
+    </div>
+   </center>
+</div> <!-- form wrapper -->
+            
+                
+<div id="textSubmittedWrapper" style="display:none">
+    <center>
+        <h4>Snippet Submitted</h4>
+        <p>Thankyou.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+    </center>
+</div>
 
 {{< /tutorial_section >}}

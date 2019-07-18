@@ -18,10 +18,14 @@
             document.getElementById(tabName+"_tablink").className += " w3-grey";
             window.scrollTo(0,0);
         }
+        
+        function initTabs(){
+            openTab('task1');
+        }
     </script>
 
   <main id="content" class="content" role="main">
-      
+       
   <article class="post {{ .Section }}">
 
     <header class="post-header">
@@ -94,6 +98,8 @@
 
 </main>
 <script lang="javascript">
-    window.onload(openTab('task1'));
+    window.onload = function(){
+        initTabs();
+    }
 </script>
 {{ partial "footer.html" . }}
