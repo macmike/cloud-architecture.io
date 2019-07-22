@@ -27,4 +27,4 @@ As content is pushed to github the [AWS Amplify](https://aws.amazon.com/amplify/
 
 ### Soft-Practice Ltd.
 
-The site is run by [Soft-Practice Ltd.](https://soft-practice.com) a UK-based Cloud, Cyber & Agile Consultancy company for the good of the development community.
+The site is hosted by [Soft-Practice Ltd.](https://soft-practice.com) a UK-based Cloud, Cyber & Agile Consultancy company for the good of the development community.
