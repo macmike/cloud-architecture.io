@@ -283,8 +283,7 @@ api_response = requests.get(api+userparam+dataparam)
 
 **Congratulations!**
 
-You've completed the workshop and now everytime you upload a file
-you should see the dashboard on the board update :)
+You've completed the workshop on the next page you can see the latest output of the api :)
 
 {{< /tutorial_section >}}
 
