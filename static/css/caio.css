@@ -43,8 +43,9 @@ h1, h2, h3, h4 {
     text-align: center;
     float: left;
     max-width: 20%;
-    height : 14em;
+    height : 12em;
     margin: 10px;
+    margin-bottom: 40px;
     border-radius: 10px;
     box-shadow: 5px 5px 8px #888888;
 }
