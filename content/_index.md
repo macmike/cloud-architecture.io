@@ -38,8 +38,23 @@ This site is for people who want to explore those differences in [architectural]
 
 Since cloud is a mix of software engineering, infrastructure engineering and security engineering a lot of people are coming to cloud architecure from a mix of different backgrounds. That merging of skills means that there's a lot of assumed knowledge that sometimes people just don't know yet. 
 
-This site, is for sharing that knowledge.
+This site, is for sharing that knowledge and is split into 4 sections:
 
+{{< click_panel title="Cloud" link="cloud">}}
+Information about Cloud concepts and technology
+{{< /click_panel >}}
+
+{{< click_panel title="Architecture" link="architecture">}}
+Architecture concepts, practices and principles in a cloud context
+{{< /click_panel >}}
+
+{{< click_panel title="Software Dev" link="software">}}
+An introduction to software development practices
+{{< /click_panel >}}
+
+{{< click_panel title="Tutorials" link="tutorials">}}
+Self-paced tutorials you can use to learn cloud technology
+{{< /click_panel >}}
 
 ### Did you say free?
 

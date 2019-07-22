@@ -2,7 +2,6 @@ baseURL = "https://cloud-architecture.io/"
 theme = "air"
 title = "cloud-architecture.io"
 sectionPagesMenu = "main"
-
 pygmentsCodeFences = "true"
 
 [author]
