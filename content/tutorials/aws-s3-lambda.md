@@ -7,6 +7,7 @@ share = true	# set false to hide share buttons
 author = "Mike"
 layout = "tutorial"
 weight = 600
+summary = "We're going to make a simple serverless app. The app will process text files, enriching them with sentiment analysis and key-phrase detection. The app is going to made up of two S3 buckets: a source bucket where we’ll upload text files and a target bucket which stores the processed data. We’ll process the data with a Lambda function that reads the file from the source bucket, calls the Comprehend service and then writes the results to a target S3 bucket."
 
 
 [menu.main] 
