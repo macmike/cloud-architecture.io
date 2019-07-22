@@ -3,13 +3,8 @@
     <header class="post-header">
         <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            {{ .Content }}
-            <a href="{{.Site.Params.gitbase}}{{.File.Path}}" class="button" target="_blank"><i class="fas fa-edit"></i> <strong>Edit</strong> this page</a>        
-          </section>
-      </p>
+    <section class="post-excerpt">        
+   
       <!--
         {{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
       -->
@@ -20,5 +15,9 @@
                 <a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
             {{ end }}
         {{end}}
+        <section class="post-content">
+            {{ .Content }}
+            <a href="{{.Site.Params.gitbase}}{{.File.Path}}" class="button" target="_blank"><i class="fas fa-edit"></i> <strong>Edit</strong> this page</a>        
+          </section>        
     </footer>
 </article>
