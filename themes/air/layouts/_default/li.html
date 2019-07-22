@@ -9,15 +9,17 @@
         {{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
       -->
     </section>
+    
+    <section class="post-content">
+            {{ .Content }}
+            <a href="{{.Site.Params.gitbase}}{{.File.Path}}" class="button" target="_blank"><i class="fas fa-edit"></i> <strong>Edit</strong> this page</a>        
+    </section>        
+    
     <footer class="post-meta">
         {{if .Params.tags }}Tags:
             {{ range $index, $tag := .Params.tags }}
                 <a href="{{$baseurl}}tags/{{ $tag | urlize }}/">#{{ $tag }}</a>,
             {{ end }}
-        {{end}}
-        <section class="post-content">
-            {{ .Content }}
-            <a href="{{.Site.Params.gitbase}}{{.File.Path}}" class="button" target="_blank"><i class="fas fa-edit"></i> <strong>Edit</strong> this page</a>        
-          </section>        
+        {{end}}        
     </footer>
 </article>
