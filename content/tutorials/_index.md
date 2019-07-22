@@ -12,12 +12,4 @@ weight = 500
 +++
 
 
-jas aljd akjd a#] a
-as
-a
-f
-dsf
-sdg
-f
-gfd
-gd
+The following are self-paced tutorials you can use to learn about cloud architecture:
