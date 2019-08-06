@@ -217,7 +217,7 @@ targetData = json.dumps({
 })        
 ```
                     
-* Write the results to the target bucket (bug)
+* Write the results to the target bucket (**bug**)
 
 ```python
 newObj = s3.Object(targetBucket, targetKey) 
