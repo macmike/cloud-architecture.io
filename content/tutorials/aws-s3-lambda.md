@@ -263,7 +263,7 @@ import urllib
 from botocore.vendored import requests
 ```
 
-* Towards the bottom of your code, after you've created all of the target data, but before you've sent the lambda return status, add a the following to call the API at `https://api.cy8er.com/sendToElasticSearch`
+* Towards the bottom of your code, after you've created all of the target data, but before you've sent the lambda return status, add a the following to call the API at `https://api.cloud-architecture.io/sendToElasticSearch?`
     
     Don't forget to change your username from mike to your name in the first line!	 
    
