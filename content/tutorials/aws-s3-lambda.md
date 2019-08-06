@@ -182,6 +182,7 @@ import boto3, json
 * Work out which S3 object in the source bucket has triggered lambda
 
 ```python
+s3 = boto3.resource('s3')
 sourceKey = event['Records'][0]['s3']['object']['key'] 
 sourceBucket = event['Records'][0]['s3']['bucket']['name'] 
 print("s3 object: " + sourceBucket + "/" + sourceKey)               
