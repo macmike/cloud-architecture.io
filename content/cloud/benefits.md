@@ -25,3 +25,4 @@ Cloud Computing brings the following benefits for organisations:
 * **Compliance** The automation of infrastructure, means that changes to assets and data (intended or otherwise) are all logged improving security and compliance.
 * **Democratisation of Infrastructure** Democratisation of large scale infrastructure as individuals can provision the sort of large scale resources that used to be only availabe to large enterprises
 * **Democratisation of Innovation** Democratisation of vendors innovations in areas such as machine learning, analytics, automation, artificial intelligence etc.
+* **Reduction in complexity** For large enterprises adoption of public cloud means a reduction in 2nd order complexity and costs of managing datacentres, cooling, safety etc.
