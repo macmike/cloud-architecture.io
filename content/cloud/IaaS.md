@@ -15,3 +15,6 @@ weight = 300
     parent = "cloud"
 
 +++
+
+"IaaS" refers to Infrastructure-as-a-Service which is the foundation of cloud computing. IaaS provides compute (VMs), Networking (routes, firewalls, dns) and storage (object stores, databases) over the network. 
+
