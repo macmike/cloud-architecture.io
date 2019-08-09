@@ -22,6 +22,7 @@ over the **internet** with **pay-as-you-go pricing**.
 
 The term “Cloud” is generally used to encompass this technology, ecosystem of platforms and tools as well as ways-of-working and architectural approaches that make the best use of cloud technology.
 
+Cloud Computing offers a range of [benefits]({{< ref "benefits" >}}) for organisations, teams and individuals.
 
 ### Why is Cloud Architecture different?
 
