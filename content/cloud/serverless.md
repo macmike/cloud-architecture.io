@@ -7,7 +7,7 @@ image = ""
 comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
 author = "Mike"
-weight = 400
+weight = 500
 
 [menu.main] 
     Name = "Serverless" 

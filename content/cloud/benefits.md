@@ -6,7 +6,7 @@ image = ""
 comments = false # set false to hide Disqus
 share = true	# set false to hide share buttons
 author = "Mike"
-weight = 100
+weight = 600
 
 [menu.main] 
     Name = "Benefits" 
