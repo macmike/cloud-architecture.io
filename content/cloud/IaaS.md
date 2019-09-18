@@ -16,6 +16,8 @@ weight = 300
 
 +++
 
+type
+
 "IaaS" refers to Infrastructure-as-a-Service which is the foundation of cloud computing. IaaS provides compute (VMs), Networking (routes, firewalls, dns) and storage (object stores, databases) over the network created via APIs and usually GUIs.
 
 IaaS enablez the ability to create environments (such as a server configuration) deterministically, based on rules. This means that environment creation becomes predictable, and testable, rather than a variable unknown. 
