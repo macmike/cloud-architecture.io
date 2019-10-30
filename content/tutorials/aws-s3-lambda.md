@@ -172,12 +172,48 @@ The only permission required is PutObject and you should restrict it to just the
 1. Go back to your Lambda function code
 
     Be wary, there are a couple of deliberate bugs in part of this **code**, if you get stuck ask for help, don't get frustrated! The steps with **bugs** are labelled so you'll know where there might be problems.
-    
-* You'll need to add some import statements to your function code:	
+   
+   
+* Note that lambda has automatically created a bit of template code for you. Don't delete this code, it's needed to make the function work.
+
+```python
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
+```
+ 
+* You'll need to add another import statement at the very top of your function. Change the first line to:	
 
 ```python
 import boto3, json                                     
 ```
+
+* From now on, all the the rest of the code we write needs to be **inside** the event handler function: 
+
+```python
+
+def lambda_handler(event, context):
+    # all of our code goes here
+    
+    # we can add lots of lines of code here
+    
+    # and add some extra line breaks between each section
+    # to make it easier to read
+    
+    print("remember to indent your code when you copy and paste, otherise it won't work properly")
+    
+    # this bit sends the result back and is the end of our lambda function
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Function has finished')
+    }
+```
+ 
 
 * Work out which S3 object in the source bucket has triggered lambda
 
