@@ -14,7 +14,7 @@ weight = "200"
     parent = "architecture"
 +++
 
-Having a common understanding of architecture, regardless of the format of that understanding (documents, models, sketches, whiteboards, implicit team knowledge), is described as "Intentional Architecture"..
+Having a common understanding of architecture, regardless of the format of that understanding (documents, models, sketches, whiteboards, implicit team knowledge), is described as "Intentional Architecture".
 
 **Good** Architecture and design have the folliowing characteristics:
 
