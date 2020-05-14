@@ -21,6 +21,8 @@ weight = 300
 Different types of problems require different types of solutions, and not every approach is suitable for every type of problem. Complexity is one of the most significant factors. Many organizations will have work at multiple levels of complexity as part of their portfolio, and often treat all of them in the same way, incorrectly applying the same processes without considering how they may be inappropriate. 
  
 **Simple** work is that which is well understood. Risk is low because we understand the problem and the solution is obvious to everyone involved. In these cases, traditional forward planning and management with a focus on reducing variability to improve efficiency can work well, as long as there is rapid enough feedback to deal with disruptive change. **Continuous flow** models and/or service management are well suited to this work.
+
+Mike thinks is good
  
 **Complicated** work requires analysis to understand the connections between cause and effect, or required inputs and outputs. Investigation and some creative thinking is necessary to understand a problem and then propose a solution. **Agile/Iterative** models are well suited to this work. Complicated endeavors are built upon specialist knowledge and aren't just obvious. They might take a lot of time and skill to do but are ultimately predictable processes. For example, a recursive sorting algorithm in computer programming is complicated, it involves variables, loops and recursion - it’s not easy for everyone to understand but it’s very predictable. Building a car engine is complicated.
  
