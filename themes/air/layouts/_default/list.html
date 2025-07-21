@@ -12,7 +12,9 @@
 	</div>
     
 	{{ range $index, $page := $paginator.Pages }}
-	   {{ .Render "li" }}
+	   {{ if not (and .Params.hidden (eq .Params.hidden true)) }}
+	      {{ .Render "li" }}
+	   {{ end }}
 	{{ end }}
 
 	{{ partial "pagination.html" $paginator }}

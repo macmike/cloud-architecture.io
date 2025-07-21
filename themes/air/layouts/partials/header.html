@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
+  	<meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
   	<meta property="og:site_name" content="{{ .Site.Title }}" />
   	<meta property="og:url" content="{{ .Permalink }}" />
     
@@ -22,7 +22,7 @@
     {{ end }}
 
   <title>
-    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+    {{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
   </title>
 
     <meta name="description" content="{{ .Site.Params.description }}" />
@@ -38,19 +38,6 @@
     <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/caio.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
-    {{ if .Site.Params.RSSLink}}
-        <link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{else}}
-      {{ if ne .URL "/" }}
-          <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      {{ end }}
-      {{if .IsNode}}
-        <link href="{{.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
-      {{end}}
-    {{end}}
-    {{.Hugo.Generator}}
 
     <link rel="canonical" href="{{ .Permalink }}" />
 

@@ -151,6 +151,9 @@ content of the :before pseudo element. Like a boss. */
 .icon-facebook:before {
     content: "\f203";
 }
+.icon-linkedin:before {
+    content: "\f207";
+}
 .icon-arrow-left:before {
     content: "\f431";
 }

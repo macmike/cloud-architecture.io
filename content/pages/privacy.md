@@ -8,9 +8,9 @@ share = false	# set false to hide share buttons
 author = "Mike"
 +++
 
-cloud-architecture.io is provided for free by [Soft-Practice Ltd.](https://soft-practice.com)
+cloud-architecture.io is provided for free by [Soft Practice Ltd.](https://softpractice.com)
 
-This Privacy Policy governs the manner in which Soft-Practice Ltd. collects, uses, maintains and discloses information collected from users (each, a "User") of the cloud-architecture.io website ("Site"). This privacy policy applies to the Site and all products and services offered by cyber-shadow Ltd.
+This Privacy Policy governs the manner in which Soft Practice Ltd. collects, uses, maintains and discloses information collected from users (each, a "User") of the cloud-architecture.io website ("Site"). This privacy policy applies to the Site and all products and services offered by cyber-shadow Ltd.
 
 ### Personal identification information
 
@@ -26,13 +26,13 @@ Our Site may use "cookies" to enhance User experience. User's web browser places
 
 ### How we use collected information
 
-Soft-Practice Ltd. may collect and use Users personal information for the following purposes:
+Soft Practice Ltd. may collect and use Users personal information for the following purposes:
 
--   To personalize user experience
+- To personalize user experience
 
 We may use information in the aggregate to understand how our Users as a group use the services and resources provided on our Site.
 
--   To improve our Site
+- To improve our Site
 
 We may use feedback you provide to improve our products and services.
 
@@ -50,7 +50,7 @@ Users may find advertising or other content on our Site that link to the sites a
 
 ### Changes to this privacy policy
 
-Soft-Practice Ltd. has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.
+Soft Practice Ltd. has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.
 
 ### Your acceptance of these terms
 
@@ -60,6 +60,6 @@ By using this Site, you signify your acceptance of this policy. If you do not ag
 
 If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at:
 
--   [Soft-Practice Ltd.](https://soft-practice.com/contact.html)
+- [Soft Practice Ltd.](https://softpractice.com/contact)
 
 This document was last updated on Nov 6, 2016

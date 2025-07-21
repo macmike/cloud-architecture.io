@@ -23,7 +23,7 @@
         <!-- Render section menu -->
             {{ if eq .Name "Pages"}}
                 <!-- Hide "Pages" section -->
-            {{ else }}
+            {{ else if not (and .Page.Params.hidden (eq .Page.Params.hidden true)) }}
                 <div class="nav-section">
                     <div class="nav-dropdown">
                             <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .Page.Permalink }}" title="{{ .Title }}"> {{ .Name }}</a>
@@ -31,7 +31,9 @@
                                 <!-- Render section children dropdown -->
                               <div class="nav-dropdown-content">
                                 {{ range .Children }}
-                                    <a href="{{ .Page.Permalink }}">{{ .Name }}</a>
+                                    {{ if not (and .Page.Params.hidden (eq .Page.Params.hidden true)) }}
+                                        <a href="{{ .Page.Permalink }}">{{ .Name }}</a>
+                                    {{ end }}
                                 {{ end }}                
                               </div>
                             {{ end }}

@@ -12,12 +12,11 @@ pygmentsCodeFences = "true"
   cover = "images/user.jpg"
   author = "Mike"
   authorlocation = ""
-  authorwebsite = "https://soft-practice.com"
+  authorwebsite = "https://softpractice.com"
   bio= "my bio"
   logo = "images/user.png"
   googleAnalyticsUserID = ""
   githubName = "macmike"
-  twitterName = "mikemacd"
   hideHUGOSupport = false 
   gitbase = "https://github.com/macmike/cloud-architecture.io/tree/master/content/"
 

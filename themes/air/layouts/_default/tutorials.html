@@ -21,11 +21,13 @@
 	</div>
     
 	{{ range $index, $page := $paginator.Pages }}
-        <hr/>
-        <h4><a href="{{.RelPermalink}}">{{ $page.Title }}</a></h4>	   
-        <section class="post-excerpt">                      
-            {{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo; Go to tutorial</a>          
-        </section>        
+        {{ if not (and .Params.hidden (eq .Params.hidden true)) }}
+            <hr/>
+            <h4><a href="{{.RelPermalink}}">{{ $page.Title }}</a></h4>	   
+            <section class="post-excerpt">                      
+                {{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo; Go to tutorial</a>          
+            </section>
+        {{ end }}        
 	{{ end }}
         
     </article>

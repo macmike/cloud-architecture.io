@@ -18,13 +18,11 @@ As content is pushed to github the [AWS Amplify](https://aws.amazon.com/amplify/
 
 ### Contributor Hall of Fame
 
-{{< contributor 
+{{< contributor
    name="Mike MacDonagh"
-   twitter="mikemacd" 
-   blog="mikemacd.wordpress.com" 
+   blog="mikemacd.wordpress.com"
    linkedin="mikemacdonagh" >}}
 
+### Soft Practice Ltd
 
-### Soft-Practice Ltd.
-
-The site is hosted by [Soft-Practice Ltd.](https://soft-practice.com) a UK-based Cloud, Cyber & Agile Consultancy company for the good of the development community.
+The site is hosted by [Soft Practice Ltd.](https://softpractice.com) a UK-based Cloud, Cyber & Agile Consultancy company for the good of the development community.

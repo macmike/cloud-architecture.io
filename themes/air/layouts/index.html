@@ -29,7 +29,9 @@
 <!-- Content -->
 <main id="content" class="content" role="main">
     
-    {{ .Render "li" }}
+    {{ if not (and .Params.hidden (eq .Params.hidden true)) }}
+        {{ .Render "li" }}
+    {{ end }}
 
 </main>
 
